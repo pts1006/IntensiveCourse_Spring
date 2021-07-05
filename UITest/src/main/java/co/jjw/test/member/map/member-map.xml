@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.jjw.test.member.map.MemberMap">
+
+	<select id="memberSignIn" resultType="memberVO">
+		SELECT * FROM MEMBER
+		WHERE ID = #{id} AND PASSWORD = #{pwd} AND STATE = 'A'
+	</select>
+	
+	<select id = "memberSelect" resultType = "memberVO">
+		SELECT * FROM MEMBER WHERE ID = #{id} AND STATE = 'A'
+	</select>
+	
+	<select id = "memberList" resultType="memberVO">
+		SELECT * FROM MEMBER WHERE STATE = 'A'
+	</select>
+</mapper>
